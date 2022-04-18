@@ -1,0 +1,284 @@
+<div class="container-fluid">
+
+    <!-- start page title -->
+    <app-page-title title="Create Asset" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                  
+
+                    <form class="row g-3">
+
+                        <div class="col-md-6">
+                          <label for="txtInventoryNo" class="form-label">Inventory No.</label>
+                          <input type="text" class="form-control" id="txtInventoryNo">
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="txtDescription" class="form-label">Description</label>
+                          <input type="text" class="form-control" id="txtDescription">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label for="txtInventoryNo" class="form-label">Category</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
+                          </div>
+  
+                          <div class="col-md-6">
+                            <label for="txtDescription" class="form-label">Sub. Category</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
+                          </div>
+
+
+                          <div class="col-md-6">
+                            <label for="txtInventoryNo" class="form-label">Create Date</label>
+                            <input type="text" class="form-control" id="txtInventoryNo">
+                          </div>
+  
+                          <div class="col-md-6">
+                            <label for="txtDescription" class="form-label">Status</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select>
+                          </div>
+
+
+
+                        <div class="col-12">
+
+                            <label for="product-image" class="mt-2"> Product Images</label>
+                            <dropzone class="dropzone" [config]="config"></dropzone>
+                          
+                        </div>
+
+
+
+                        <div class="col-12">
+                            <ul ngbNav #customNav="ngbNav" [activeId]="1" class="nav-tabs nav-tabs-custom nav-justified">
+                                <li [ngbNavItem]="1">
+                                  <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">General</span>
+                                  </a>
+                                  <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                                  </ng-template>
+                                </li>
+                                <li [ngbNavItem]="2">
+                                  <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Location</span>
+                                  </a>
+                                  <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                                  </ng-template>
+                                </li>
+                                <li [ngbNavItem]="3">
+                                  <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Finance</span>
+                                  </a>
+                                  <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                                  </ng-template>
+                                </li>
+                                <li [ngbNavItem]="4">
+                                  <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="fas fa-cog"></i></span>
+                                    <span class="d-none d-sm-block">History</span>
+                                  </a>
+                                  <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                                  </ng-template>
+                                </li>
+                              </ul>
+                              <div [ngbNavOutlet]="customNav"></div>
+                        </div>
+
+
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                          </div>
+
+                       
+                      </form>
+                
+
+
+
+                </div> <!-- end card-body-->
+            </div><!-- end card-->
+        </div>
+
+
+    </div> <!-- end row -->
+
+
+
+  <!-- Tab Content -->
+  <ng-template #TabContent>
+    
+    <div class="card">
+        <div class="card-body">
+        
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label float-right">Title of ownership</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Manufacturer</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Model</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Serial#</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Recieve Date</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-6">
+                <div class="row mb-3">
+                  <label for="metadescription" class="col-sm-2 col-form-label">Note</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="metadescription" rows="6"></textarea>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+
+     
+        </div>
+      </div>
+  </ng-template>
+
+  <!-- Tab Content -->
+  <ng-template #TabContent1>
+    <p class="p-3 mb-0">
+      Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+      single-origin coffee squid. Exercitation +1 labore velit, blog
+      sartorial PBR leggings next level wes anderson artisan four loko
+      farm-to-table craft beer twee. Qui photo booth letterpress,
+      commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+      vinyl cillum PBR. Homo nostrud organic, assumenda labore
+      aesthetic magna delectus.
+    </p>
+  </ng-template>
+
+
+
+</div>  
+
+
+
+<!--
+
+
+
+
+
+
+    
+
+
+      <form>
+                        <div class="mb-3">
+                            <label for="formrow-firstname-input">First name</label>
+                            <input type="text" class="form-control" id="formrow-firstname-input">
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="formrow-email-input">Email</label>
+                                    <input type="email" class="form-control" id="formrow-email-input">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="formrow-password-input">Password</label>
+                                    <input type="password" class="form-control" id="formrow-password-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label for="formrow-inputCity">City</label>
+                                    <input type="text" class="form-control" id="formrow-inputCity">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label for="formrow-inputState">State</label>
+                                    <select id="formrow-inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label for="formrow-inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="formrow-inputZip">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary w-md">Submit</button>
+                        </div>
+                    </form>
+
+-->
