@@ -1,0 +1,16 @@
+FROM node:latest as node
+
+WORKDIR /src
+
+COPY . /src
+
+RUN npm install
+
+#Nodemon will allow you to start your node.js project and make changes without manually shutting down and restarting your server.
+#Many people are scared of installing nodemon globally, so here’s a guide to install nodemon locally in your node.js project.
+
+RUN npm install nodemon --save-dev
+
+EXPOSE 3000
+
+CMD ["npm","start"]

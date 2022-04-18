@@ -1,0 +1,1 @@
+{"version":3,"file":"dnd.module.d.ts","sources":["dnd.module.d.ts"],"names":[],"mappings":";;;;;AAAA;;;;AACA","sourcesContent":["export declare class DndModule {\n}\n"]}
