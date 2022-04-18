@@ -1,0 +1,35 @@
+version: '3'
+services:
+  web:
+    container_name: webapp
+    build: ./angular-app
+    ports:
+    - "4200:4200"
+    volumes:
+    - "./angular-app:/app"
+  # node:
+  #   container_name: nodeapp
+  #   build: ./node-app
+  #   ports:
+  #   - "3000:3000"
+  #   volumes:
+  #   - ./node-app:/src
+
+  node_api:
+    container_name: nodeapp_api
+    build: ./node-app-api
+    ports:
+    - "6000:6000"
+    volumes:
+    - ./node-app-api:/src_api
+    links:
+    - mongo
+  mongo:
+    container_name: mongodb
+    image: mongo
+    ports:
+    - "27017:27017"
+    volumes:
+    - data:/data/db
+volumes:
+  data:
