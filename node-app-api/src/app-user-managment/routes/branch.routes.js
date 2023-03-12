@@ -1,7 +1,7 @@
 "use strict"
 const router=require('express').Router()
-const Controller = require('./../controllers/branch.controller')
-const BaseRouter=require('./../../routes/base.routes')
+const Controller = require('../controllers/branch.controller')
+const BaseRouter=require('../../routes/base.routes')
 // const baseRouter=new BaseRouter(Controller)
  //const router=baseRouter.getRouter(
 

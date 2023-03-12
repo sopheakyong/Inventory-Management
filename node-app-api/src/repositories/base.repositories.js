@@ -13,7 +13,15 @@ constructor(model) {
        this.queryCriteria=query
     }
 
-
+/*
+    Method: list
+    Description: get record with paging
+    Parameters:
+        @perPage -> number of record to display
+        @page -> current position of page number
+        @query -> condiction for filter record
+        @sort -> order record by asc or desc
+*/
 
   async list(perPage, page, query={}, sort={}){
         try
@@ -115,6 +123,15 @@ constructor(model) {
 }
 
 module.exports = Repository
+
+
+
+
+
+
+
+
+
 
 
 // list(perPage, page, query={}, sort={}){

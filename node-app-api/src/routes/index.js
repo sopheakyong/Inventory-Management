@@ -1,10 +1,11 @@
-var user_route=require('./../ap-account-managment/routes')
-var loan_route=require('./../ap-loan-management/routes')
+var user_route=require('./../app-user-managment/routes')
+//var asset_route=require('./../app-asset-management/routes')
+
 //  ,
 routes =
 [
     user_route,
-    loan_route
+    //asset_route
 ];
 exports.routesConfig=(app)=>{
   app.use(routes)

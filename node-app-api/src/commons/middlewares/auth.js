@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jwt=require('jsonwebtoken')
-const User = require('./../../ap-account-managment/models/users.model')
+const User = require('./../../app-user-managment/models/users.model')
 // FORMAT OF Token
 // Authorization: Bearer <access_token>
 module.exports= async function(req,res,next){
